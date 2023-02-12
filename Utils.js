@@ -62,3 +62,11 @@ function* generateCorrelativeID(lastID) {
 }
 //Const ID = generateCorrelativeID();
 //ID.next().value
+
+const currencyFormat = (number, money) => {
+  let strFormat = new Intl.NumberFormat('de-DE', {
+    style: 'currency', currency: money
+  }).format(number);
+
+  return strFormat;
+}
